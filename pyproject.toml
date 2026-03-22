@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iacguard"
+version = "0.1.0"
+description = "Terraform pre-apply risk and blast radius analyzer"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["colorama>=0.4.6"]
+
+[project.scripts]
+iacguard = "iacguard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.1",
+  "terraform_version": "1.5.0",
+  "resource_changes": [
+    {
+      "address": "aws_db_instance.primary",
+      "mode": "managed",
+      "type": "aws_db_instance",
+      "name": "primary",
+      "change": {
+        "actions": ["update"],
+        "before": {"identifier": "prod-db", "backup_retention_period": 7},
+        "after":  {"identifier": "prod-db", "backup_retention_period": 14},
+        "after_unknown": {},
+        "replacing": false
+      }
+    }
+  ]
+}
